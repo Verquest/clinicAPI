@@ -53,6 +53,7 @@ namespace cw_8_22c.Controllers
             if (doctor == null)
                 return NotFound();
             await _service.DeleteDoctor(doctor);
+            await _service.SaveDatabase();
             return Ok();
         }
     }
